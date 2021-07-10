@@ -1,9 +1,14 @@
+body {
+  font-family: 'Yeseva One', cursive;
+}
+
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
 }
 
 .header {
+  font-family: 'Poiret One', cursive;
   height: 75px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -53,15 +58,97 @@
   text-decoration: none;
 }
 
+.conteiner {
+  width: 100%;
+  border-top: #252525 1px solid;
+}
+
+.conteiner-content {
+  max-width: 1168px;
+  min-height: 585px;
+  margin: 0 auto;
+  padding: 0;
+  border-left: #252525 1px solid;
+  border-right: #252525 1px solid;
+}
+
+.conteiner-slider {
+  width: 600px;
+  float: left;
+  margin-top: -77px;
+}
+
+.conteiner-slider img {
+  width: 600px;
+}
+
+.conteiner-instagram {
+  display: inline-block;
+  float: left;
+  width: 75px;
+  height: 587px;
+  text-align: center;
+}
+
+.conteiner-instagram img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conteiner-instagramname {
+  margin-top: 66px;
+}
+
+.conteiner-instagramlogo {
+  margin-top: 43px;
+}
+
 .conteiner1 {
   width: 100%;
   border-top: #252525 1px solid;
 }
 
 .conteiner1-content {
-  max-width: 1170px;
-  height: 585px;
+  position: relative;
+  max-width: 1168px;
+  min-height: 585px;
   margin: 0 auto;
+  padding: 0;
   border-left: #252525 1px solid;
   border-right: #252525 1px solid;
+}
+
+.conteiner1-text {
+  position: absolute;
+  width: 455px;
+  height: 584px;
+  margin: 75px  0px 141px 54px;
+}
+
+.conteiner1-text h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.conteiner1-text p {
+  width: 430px;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.conteiner1-photo {
+  position: absolute;
+  width: 501px;
+  right: 0px;
+}
+
+.conteiner1-vector {
+  position: absolute;
+  top: 26px;
+  right: 85px;
 }
