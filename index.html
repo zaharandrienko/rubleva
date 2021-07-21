@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rubleva</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,17 +21,23 @@
     <div class="wrapper">
         <header class="header">
             <span class="serch">
-                <div class="serch-icon serch-item"><a href=""><img src="img/serch.svg" alt=""></a></div>
-                <input type="text" class="serch-input none serch-item">
-                <button class="darkbutton serch-button none serch-item">enter</button>
+                <div class="serch-icon serch-item" onclick="serchOn()"><a><img src="img/serch.svg" alt=""></a></div>
+                <div class="srch-fprm none">
+                    <input type="text" value="Serch" class="serch-input serch-item">
+                    <button class="darkbutton serch-button serch-item">enter</button>
+                </div>
             </span>
             <span class="menu">
                 <a href="" class="menu-icon"><img src="img/menu.svg" alt=""></a>
             </span>
             <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">ALL STYLES</a></li>
+                    <a href="/index.html" class="nav-link">
+                        <li class="nav-item">HOME</li>
+                    </a>
+                    <a href="/index.html" class="nav-link">
+                        <li class="nav-item">ALL STYLES</li>
+                    </a>
                 </ul>
             </nav>
         </header>
@@ -38,6 +45,10 @@
 
 
     <div class="conteiner">
+        <div class="conteiner-instagram2">
+            <img src="/img/instagramname.png" class="conteiner-instagramname">
+            <img src="/img/instagramlogo.png" class="conteiner-instagramlogo">
+        </div>
         <div class="conteiner-content">
             <hr class="conteiner-line">
             <div class="conteiner-instagram">
@@ -138,7 +149,7 @@
             <img class="conteiner2-photo" src="/img/content2.png">
             <img class="conteiner2-vector" src="/img/vector2.png">
             <div class="conteiner2-text">
-                <h1 class="conteiner2-subtitle">причины разобрать гардероб со стилистом</h1>
+                <p class="conteiner2-subtitle">причины разобрать гардероб со стилистом</p>
                 <ul class="conteiner2-ul">
                     <li class="conteiner2-li">Шкаф забит, но нечего надеть?</li>
                     <li class="conteiner2-li">У вас есть интересная одежда, но вы не знаете, с чем её сочетать?</li>
@@ -148,7 +159,7 @@
                         вещь?</li>
                 </ul>
                 <button class="darkbutton">ЗАПИСАТЬСЯ</button>
-                <button class="lightbutton">ПОДРОБНЕЕ</button>
+                <a href="/more1.html"><button class="lightbutton">ПОДРОБНЕЕ</button></a>
             </div>
         </div>
     </div>
@@ -182,7 +193,7 @@
     <div class="conteiner4">
         <div class="conteiner4-content">
             <div class="conteiner4-text">
-                <h1 class="conteiner4-subtitle">Причины отправиться на шопинг со стилистом</h1>
+                <p class="conteiner4-subtitle">Причины отправиться на шопинг со стилистом</p>
                 <ul class="conteiner4-ul">
                     <li class="conteiner4-li">На поиск новых вещей вы тратите целый день в ТЦ</li>
                     <li class="conteiner4-li">В магазине вы теряетесь и не знаете, что выбрать</li>
@@ -191,7 +202,7 @@
                     <li class="conteiner4-li">Думаете, что на таких как вы не шьют одежду</li>
                 </ul>
                 <button class="darkbutton conteiner4-button">ЗАПИСАТЬСЯ</button>
-                <button class="lightbutton">ПОДРОБНЕЕ</button>
+                <a href="/more2.html"><button class="lightbutton">ПОДРОБНЕЕ</button></a>
             </div>
             <img class="conteiner4-photo" src="/img/content3.png">
             <img src="/img/title2.png" class="conteiner4-title">
@@ -230,17 +241,17 @@
     <div class="conteiner2">
         <div class="conteiner2-content small">
             <img src="/img/title3.png" class="conteiner2-title title3">
-            <img class="conteiner2-photo" src="/img/content4.png">
+            <img class="conteiner2-photo small-photo" src="/img/content4.png">
             <div class="conteiner2-text">
-                <h1 class="conteiner2-subtitle">Почему фотосессия со стилистом — это круто?</h1>
-                <ul class="conteiner2-ul">
+                <h1 class="conteiner2-subtitle small-subtitle">Почему фотосессия со стилистом — это круто?</h1>
+                <ul class="conteiner2-ul small-ul">
                     <li class="conteiner2-li">Не надо тратиться на покупку одежды в магазине</li>
                     <li class="conteiner2-li">Не надо придумывать образы</li>
                     <li class="conteiner2-li">Не надо везти кучу одежды</li>
                     <li class="conteiner2-li">Не надо волноваться , как ты смотришься в кадре</li>
                 </ul>
-                <button class="darkbutton">ЗАПИСАТЬСЯ</button>
-                <button class="lightbutton">ПОДРОБНЕЕ</button>
+                <button class="darkbutton small-button">ЗАПИСАТЬСЯ</button>
+                <a href="/more3.html"><button class="lightbutton">ПОДРОБНЕЕ</button></a>
             </div>
         </div>
     </div>
@@ -254,9 +265,9 @@
                 <img class="photo1 roundArc" src="/img/mainslider/photo1/3.png">
             </div>
             <div class="conteiner5-img2">
-                <img class="photo2 roundArc"  src="/img/mainslider/photo4/1.png">
-                <img class="photo2 fade"  src="/img/mainslider/photo4/2.png">
-                <img class="photo2 bottomArc"  src="/img/mainslider/photo4/3.png">
+                <img class="photo2 roundArc" src="/img/mainslider/photo4/1.png">
+                <img class="photo2 fade" src="/img/mainslider/photo4/2.png">
+                <img class="photo2 bottomArc" src="/img/mainslider/photo4/3.png">
             </div>
             <div class="conteiner5-img3">
                 <img class="photo3 topArc" src="/img/mainslider/photo2/1.png">
@@ -273,8 +284,10 @@
                 <img class="photo5 topArc" src="/img/mainslider/photo5/2.png">
                 <img class="photo5 roundArc" src="/img/mainslider/photo5/3.png">
             </div>
-            <div class="conteiner5-vector1"><a class="prev" onclick="plusPhoto(-1)"><img src="/img/mainslider/vector1.svg"></a></div>
-            <div class="conteiner5-vector2"><a class="prev" onclick="plusPhoto(1)"><img src="/img/mainslider/vector2.svg"></a></div>
+            <div class="conteiner5-vector1"><a class="prev" onclick="plusPhoto(-1)"><img
+                        src="/img/mainslider/vector1.svg"></a></div>
+            <div class="conteiner5-vector2"><a class="prev" onclick="plusPhoto(1)"><img
+                        src="/img/mainslider/vector2.svg"></a></div>
         </div>
     </div>
 
@@ -290,7 +303,7 @@
     <div class="conteiner6">
         <div class="conteiner6-content">
             <div class="conteiner6-text">
-                <h1 class="conteiner6-subtitle">Как работать со стилистом онлайн?</h1>
+                <p class="conteiner6-subtitle">Как работать со стилистом онлайн?</p>
                 <p class="conteiner6-p">Интернет стирает границы и позволяет нам общаться, находясь в разных городах,
                     странах и даже континентах. Вместо встречи мы будем общаться в мессенджере или по видеосвязи.
                     Вместо того, чтобы приехать к Вам, Вы сделаете фото своих вещей, а пришлю подробную презентацию со
@@ -299,7 +312,7 @@
                     примерочной и мы выберем то, что “сядет” на Вас.
                 </p>
                 <button class="darkbutton conteiner6-button">ЗАПИСАТЬСЯ</button>
-                <button class="lightbutton">ПОДРОБНЕЕ</button>
+                <a href="/more4.html"><button class="lightbutton">ПОДРОБНЕЕ</button></a>
             </div>
             <img class="conteiner6-photo" src="/img/content5.png">
             <img src="/img/title4.png" class="conteiner6-title">
@@ -315,12 +328,14 @@
         <img src="/img/footer/Ellipse 3.png" class="footer-vector4">
         <img src="/img/footer/IMG_0094 1.png" class="footer-photo">
         <div class="footer-form">
-            <h1 class="footer-title">have questions?</h1>
-            <input type="text" class="footer-input1">
+            <p class="footer-title">have questions?</p>
+            <img src="/img/livector.png" class="footer-livector1">
+            <img src="/img/livector.png" class="footer-livector2">
+            <input type="text" class="footer-input1" value="Name">
             <br>
-            <input type="text" class="footer-input2">
+            <input type="text" class="footer-input2" value="E-mail">
             <br>
-            <input type="text" class="footer-input3">
+            <input type="text" class="footer-input3" value="Text your message">
             <br>
             <button class="footer-button darkbutton">send</button>
         </div>
@@ -329,9 +344,45 @@
         const conteinerNumber = document.querySelector('.conteiner-number');
         var slideIndex = 1;
         var index = '01'
+        var serchInd = false
         showMini()
         showSlides()
         showPhoto(slideIndex);
+        timer()
+
+
+
+
+
+        function serchOn() {
+            serchInd = !serchInd
+            serch()
+        }
+
+        function serch() {
+            var serch = document.getElementsByClassName("none");
+            var i;
+            if (serchInd) {
+                for (i = 0; i < serch.length; i++) {
+                    serch[i].style.display = "block";
+                }
+            }
+            else {
+                for (i = 0; i < serch.length; i++) {
+                    serch[i].style.display = "none";
+                }
+            }
+            console.log(serchInd)
+        }
+
+        function timer() {
+            setTimeout(
+                function timer1() {
+                    plusPhoto(1)
+                    timer()
+                }
+                , 5000)
+        }
 
 
 
@@ -455,8 +506,8 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "block";
-            
-            
+
+
             for (i = 0; i < slides1.length; i++) {
                 slides1[i].style.display = "none";
             }
@@ -479,6 +530,7 @@
                 slides4[i].style.display = "none";
             }
             slides4[slideIndex - 1].style.display = "block";
+
         }
 
 
