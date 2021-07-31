@@ -13,22 +13,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/main.js"></script>
 </head>
 
 <body>
-
-
+    <div class="menu-mobile">
+        <img onclick="menu()" class="menu-close" src="/img/x.png">
+        <ul class="menu-nav">
+            <a href="/index.html" class="nav-link">
+                <li class="menu-item">HOME</li>
+            </a>
+            <a href="/styles.html" class="nav-link">
+                <li class="menu-item">ALL STYLES</li>
+            </a>
+        </ul>
+    </div>
     <div class="wrapper">
         <header class="header">
             <span class="serch">
                 <div class="serch-icon serch-item" onclick="serchOn()"><a><img src="img/serch.svg" alt=""></a></div>
-                <div class="srch-fprm none">
-                    <input type="text" value="Serch" class="serch-input serch-item">
+                <div class="serch-form none">
+                    <input type="text" placeholder="Serch . . ." class="serch-input serch-item">
                     <button class="darkbutton serch-button serch-item">enter</button>
                 </div>
             </span>
-            <span class="menu">
-                <a href="" class="menu-icon"><img src="img/menu.svg" alt=""></a>
+            <span class="menu" onclick="menu()">
+                <a class="menu-icon"><img src="img/menu.png" alt=""></a>
             </span>
             <nav>
                 <ul class="nav">
@@ -55,6 +66,7 @@
                 <img src="/img/instagramname.png" class="conteiner-instagramname">
                 <img src="/img/instagramlogo.png" class="conteiner-instagramlogo">
             </div>
+            <img src="/img/lamp4.png" class="conteiner-lamp">
             <div class="conteiner-slider">
                 <div class="test">
                     <div class="test-back">
@@ -100,6 +112,45 @@
                 </div>
             </div>
             <div class="conteiner-title">Your<br> personal<br> stylist</div>
+            <div class="conteiner-mobile">
+                <div class="test2">
+                    <div class="test2-back">
+                        <img src="/img/test2/Mask Group.png">
+                        <img src="/img/test2/Mask Group-1.png">
+                        <img src="/img/test2/Mask Group-2.png">
+                        <img src="/img/test2/Mask Group-3.png">
+                        <img src="/img/test2/Mask Group-4.png">
+                    </div>
+                    <div class="test2-conteiner">
+                        <img class="test2-img1 restart2 first" src="/img/test2/Mask Group-11.png">
+                        <img class="test2-img1 restart2 second" src="/img/test2/Mask Group-10.png">
+                        <img class="test2-img1 restart2 third" src="/img/test2/Mask Group-9.png">
+                        <img class="test2-img1 restart2 fourth" src="/img/test2/Mask Group-8.png">
+                        <img class="test2-img1 restart2 fifth" src="/img/test2/Mask Group-7.png">
+                    </div>
+                    <div class="test2-conteiner">
+                        <img class="test2-img2 restart2 first" src="/img/test/Mask Group.png">
+                        <img class="test2-img2 restart2 second" src="/img/test/Mask Group-1.png">
+                        <img class="test2-img2 restart2 third" src="/img/test/Mask Group-2.png">
+                        <img class="test2-img2 restart2 fourth" src="/img/test/Mask Group-3.png">
+                        <img class="test2-img2 restart2 fifth" src="/img/test/Mask Group-4.png">
+                    </div>
+                    <div class="test2-conteiner">
+                        <img class="test2-img3 restart2 first" src="/img/test/Mask Group-6.png">
+                        <img class="test2-img3 restart2 second" src="/img/test/Mask Group-7.png">
+                        <img class="test2-img3 restart2 third" src="/img/test/Mask Group-8.png">
+                        <img class="test2-img3 restart2 fourth" src="/img/test/Mask Group-9.png">
+                        <img class="test2-img3 restart2 fifth" src="/img/test/Mask Group-10.png">
+                    </div>
+                    <div class="test2-conteiner">
+                        <img class="test2-img4 restart2 first" src="/img/test2/Mask Group.png">
+                        <img class="test2-img4 restart2 second" src="/img/test2/Mask Group-1.png">
+                        <img class="test2-img4 restart2 third" src="/img/test2/Mask Group-2.png">
+                        <img class="test2-img4 restart2 fourth" src="/img/test2/Mask Group-3.png">
+                        <img class="test2-img4 restart2 fifth" src="/img/test2/Mask Group-4.png">
+                    </div>
+                </div>
+            </div>
             <div class="conteiner-mini">
                 <div class="conteiner-number">
                     01
@@ -120,6 +171,11 @@
     </div>
     <div class="conteiner1">
         <div class="conteiner1-content">
+            <div class="conteiner1-mobile">
+                <h1>Hello! I’m Anastasia</h1>
+            </div>
+            <img class="conteiner1-photo" src="/img/content1.jpg">
+            <img class="conteiner1-vector" src="/img/vector1.png">
             <div class="conteiner1-text">
                 <h1>Hello! I’m Anastasia</h1>
                 <p>Я — персональный стилист уже более трех лет. За это время я сделала счастливыми более 150 девушек,
@@ -131,8 +187,7 @@
                     более уверенной в себе, раскрепощенной и открытой.
                 </p>
             </div>
-            <img class="conteiner1-photo" src="/img/content1.jpg">
-            <img class="conteiner1-vector" src="/img/vector1.png">
+
         </div>
     </div>
     <div class="subtitle1">
@@ -140,6 +195,7 @@
             <h1 class="subtitle1-h1">Wardrobe Оverview</h1>
         </div>
         <img src="/img/lamp.png" class="subtitle1-lamp">
+        <img src="/img/lamp3.png" class="subtitle1-mobilelamp">
     </div>
 
 
@@ -187,6 +243,7 @@
             <h1 class="subtitle2-h1">Shopping support</h1>
         </div>
         <img src="/img/lamp2.png" class="subtitle2-lamp">
+        <img src="/img/lamp3.png" class="subtitle1-mobilelamp">
     </div>
 
 
@@ -235,6 +292,7 @@
             <h1 class="subtitle1-h1">PHOTOSESSION</h1>
         </div>
         <img src="/img/lamp.png" class="subtitle1-lamp">
+        <img src="/img/lamp3.png" class="subtitle1-mobilelamp">
     </div>
 
 
@@ -297,6 +355,7 @@
             <h1 class="subtitle2-h1">online services</h1>
         </div>
         <img src="/img/lamp2.png" class="subtitle2-lamp">
+        <img src="/img/lamp3.png" class="subtitle1-mobilelamp">
     </div>
 
 
@@ -325,28 +384,32 @@
         <img src="/img/footer/Vector.png" class="footer-vector3">
         <img src="/img/footer/Ellipse 3.png" class="footer-vector4">
         <img src="/img/footer/IMG_0094 1.png" class="footer-photo">
-        <div class="footer-form">
+        <form class="footer-form">
             <p class="footer-title">have questions?</p>
-            <img src="/img/livector.png" class="footer-livector1">
-            <img src="/img/livector.png" class="footer-livector2">
-            <input type="text" class="footer-input1" value="Name">
+            <div class="circle circle-1"></div>
+            <input type="text" class="footer-input1" name="Name" placeholder="Name" required>
             <br>
-            <input type="text" class="footer-input2" value="E-mail">
+            <div class="circle circle-3"></div>
+            <input type="text" class="footer-input2" name="Name" placeholder="E-mail" required>
             <br>
-            <input type="text" class="footer-input3" value="Text your message">
+            <div class="circle circle-2"></div>
+            <input type="text" class="footer-input3" name="Name" placeholder="Text your message">
             <br>
             <button class="footer-button darkbutton">send</button>
-        </div>
+        </form>
     </div>
     <script>
         const conteinerNumber = document.querySelector('.conteiner-number');
         var slideIndex = 1;
         var index = '01'
         var serchInd = false
+        showSlidesMobile()
         showMini()
         showSlides()
         showPhoto(slideIndex);
         timer()
+
+
 
 
 
@@ -483,6 +546,72 @@
                 }
                 , 500)
         }
+
+
+
+
+        function showSlidesMobile() {
+
+            setTimeout(
+                function showSlides1() {
+                    var i;
+                    var slides1 = document.getElementsByClassName("test2-img1");
+                    for (i = 0; i < slides1.length; i++) {
+                        slides1[i].style.display = "block";
+                    }
+                    index = '02'
+                    conteinerNumber.innerHTML = index
+                    setTimeout(
+                        function showSlides2() {
+                            var i;
+                            var slides2 = document.getElementsByClassName("test2-img2");
+                            for (i = 0; i < slides2.length; i++) {
+                                slides2[i].style.display = "block";
+                            }
+                            index = '03'
+                            conteinerNumber.innerHTML = index
+                            setTimeout(
+                                function showSlides3() {
+                                    var i;
+                                    var slides3 = document.getElementsByClassName("test2-img3");
+                                    for (i = 0; i < slides3.length; i++) {
+                                        slides3[i].style.display = "block";
+                                    }
+                                    index = '04'
+                                    conteinerNumber.innerHTML = index
+                                    setTimeout(
+                                        function showSlides4() {
+                                            var i;
+                                            var slides4 = document.getElementsByClassName("test2-img4");
+                                            for (i = 0; i < slides4.length; i++) {
+                                                slides4[i].style.display = "block";
+                                            }
+                                            index = '01'
+                                            conteinerNumber.innerHTML = index
+                                            setTimeout(
+                                                function restart() {
+                                                    var i;
+                                                    var restart = document.getElementsByClassName("restart2");
+                                                    for (i = 0; i < restart.length; i++) {
+                                                        restart[i].style.display = "none";
+                                                    }
+                                                    showSlidesMobile()
+                                                }
+                                                , 2500)
+                                        }
+                                        , 3000)
+                                }
+                                , 3000)
+                        }
+                        , 3000)
+                }
+                , 500)
+        }
+
+
+
+
+
 
 
         function plusPhoto(n) {

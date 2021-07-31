@@ -16,17 +16,28 @@
 </head>
 
 <body>
+    <div class="menu-mobile">
+        <img onclick="menu()" class="menu-close" src="/img/x.png">
+        <ul class="menu-nav">
+            <a href="/index.html" class="nav-link">
+                <li class="menu-item">HOME</li>
+            </a>
+            <a href="/styles.html" class="nav-link">
+                <li class="menu-item">ALL STYLES</li>
+            </a>
+        </ul>
+    </div>
     <div class="wrapper">
         <header class="header">
             <span class="serch">
                 <div class="serch-icon serch-item" onclick="serchOn()"><a><img src="img/serch.svg" alt=""></a></div>
-                <div class="srch-fprm none">
-                    <input type="text" value="Serch" class="serch-input serch-item">
+                <div class="serch-form none">
+                    <input type="text" placeholder="Serch . . ." class="serch-input serch-item">
                     <button class="darkbutton serch-button serch-item">enter</button>
                 </div>
             </span>
-            <span class="menu">
-                <a href="" class="menu-icon"><img src="img/menu.svg" alt=""></a>
+            <span class="menu" onclick="menu()">
+                <a class="menu-icon"><img src="img/menu.png" alt=""></a>
             </span>
             <nav>
                 <ul class="nav">
@@ -40,6 +51,8 @@
             </nav>
         </header>
     </div>
+
+
     <div class="conteiner8">
         <div class="conteiner8-instagram2">
             <img src="/img/instagramname.png" class="conteiner8-instagramname">
@@ -50,8 +63,9 @@
                 <img src="/img/instagramname.png" class="conteiner8-instagramname">
                 <img src="/img/instagramlogo.png" class="conteiner8-instagramlogo">
             </div>
+            <img src="/img/lamp4.png" class="conteiner8-lamp">
             <div class="conteiner8-title"><p>create </p><p class="conteiner8-your">your</p><p>own</p><p>style</p></div>
-            <img src="/img/content6.png" class="conteiner8-photo">
+            <div class="conteiner8-photo"><img src="/img/content6.png"></div>
             <div class="conteiner8-text">
                 <p>
                     Здесь я собрала лучшие луки для тебя, чтобы ты чувствовала себя уверенно везде и всегда. Здесь мы собрали лучшие образы для тебя, чтобы ты чувствовала себя уверенно везде и всегда
@@ -64,16 +78,17 @@
             <h1 class="subtitle1-h1">Very pink style</h1>
         </div>
         <img src="/img/lamp.png" class="subtitle1-lamp">
+        <img src="/img/lamp3.png" class="subtitle1-mobilelamp">
     </div>
     <div class="conteinerStyle">
         <div class="unActive" style="position: absolute;width: 100%;height: 100%;" onclick="unActive()"></div>
         <div class="conteinerStyle-content">
-            <div class="conteinerStyle-styleitem conteinerStyle-item1" onclick="active(1)"><img src="/img/items/1t.png"><a href="https://www2.hm.com/ru_ru/productpage.0967179001.html"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/1.png"></div>
-            <div class="conteinerStyle-styleitem conteinerStyle-item2" onclick="active(2)"><img src="/img/items/2t.png"><a href="https://www.zara.com/ru/ru/%D0%B1%D0%BB%D0%B5%D0%B9%D0%B7%D0%B5%D1%80-%D0%BE%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%B9%D0%B7-%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D0%B3%D0%BE-%D0%BA%D1%80%D0%BE%D1%8F-p03528816.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=109014226"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/2.png"></div>
-            <div class="conteinerStyle-styleitem conteinerStyle-item3" onclick="active(3)"><img src="/img/items/3t.png"><a href="https://www.zara.com/ru/ru/%D1%81%D1%82%D0%B5%D0%B3%D0%B0%D0%BD%D0%B0%D1%8F-%D1%81%D1%83%D0%BC%D0%BA%D0%B0-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D0%BF%D0%BB%D0%B5%D1%87%D0%BE-%D1%81-%D1%86%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%BE%D0%B9-p16227710.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=112915954"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/3.png"></div>
-            <div class="conteinerStyle-styleitem conteinerStyle-item4" onclick="active(4)"><img src="/img/items/4t.png"><a href="https://www.zara.com/ru/ru/%D1%83%D0%BA%D0%BE%D1%80%D0%BE%D1%87%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF-%D0%BD%D0%B0-%D0%B1%D1%80%D0%B5%D1%82%D0%B5%D0%BB%D1%8F%D1%85-p04424184.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=111229213"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/4.png"></div>
-            <div class="conteinerStyle-styleitem conteinerStyle-item5" onclick="active(5)"><img src="/img/items/5t.png"><a href="https://www.zara.com/ru/ru/%D0%BA%D0%BE%D0%B6%D0%B0%D0%BD%D1%8B%D0%B5-%D1%82%D1%83%D1%84%D0%BB%D0%B8-%D0%B1%D0%B5%D0%B7-%D0%B7%D0%B0%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2--%D0%BD%D0%B0-%D0%BA%D0%B0%D0%B1%D0%BB%D1%83%D0%BA%D0%B5-p11212810.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=122040613"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/5.png"></div>
-            <div class="conteinerStyle-styleitem conteinerStyle-item6" onclick="active(6)"><img src="/img/items/6t.png"><a href="https://www.zara.com/ru/ru/%D0%B1%D1%80%D1%8E%D0%BA%D0%B8-%D0%B8%D0%B7-%D1%81%D1%82%D1%80%D1%83%D1%8F%D1%89%D0%B5%D0%B9%D1%81%D1%8F-%D1%82%D0%BA%D0%B0%D0%BD%D0%B8-p02718816.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=109014220"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/6.png"></div>
+            <div class="conteinerStyle-styleitem conteinerStyle-item1 move" onclick="active(1)"><img src="/img/items/1t.png"><a href="https://www2.hm.com/ru_ru/productpage.0967179001.html"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/1.png"></div>
+            <div class="conteinerStyle-styleitem conteinerStyle-item2 move" onclick="active(2)"><img src="/img/items/2t.png"><a href="https://www.zara.com/ru/ru/%D0%B1%D0%BB%D0%B5%D0%B9%D0%B7%D0%B5%D1%80-%D0%BE%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%B9%D0%B7-%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D0%B3%D0%BE-%D0%BA%D1%80%D0%BE%D1%8F-p03528816.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=109014226"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/2.png"></div>
+            <div class="conteinerStyle-styleitem conteinerStyle-item3 move" onclick="active(3)"><img src="/img/items/3t.png"><a href="https://www.zara.com/ru/ru/%D1%81%D1%82%D0%B5%D0%B3%D0%B0%D0%BD%D0%B0%D1%8F-%D1%81%D1%83%D0%BC%D0%BA%D0%B0-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D0%BF%D0%BB%D0%B5%D1%87%D0%BE-%D1%81-%D1%86%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%BE%D0%B9-p16227710.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=112915954"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/3.png"></div>
+            <div class="conteinerStyle-styleitem conteinerStyle-item4 move" onclick="active(4)"><img src="/img/items/4t.png"><a href="https://www.zara.com/ru/ru/%D1%83%D0%BA%D0%BE%D1%80%D0%BE%D1%87%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF-%D0%BD%D0%B0-%D0%B1%D1%80%D0%B5%D1%82%D0%B5%D0%BB%D1%8F%D1%85-p04424184.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=111229213"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/4.png"></div>
+            <div class="conteinerStyle-styleitem conteinerStyle-item5 move" onclick="active(5)"><img src="/img/items/5t.png"><a href="https://www.zara.com/ru/ru/%D0%BA%D0%BE%D0%B6%D0%B0%D0%BD%D1%8B%D0%B5-%D1%82%D1%83%D1%84%D0%BB%D0%B8-%D0%B1%D0%B5%D0%B7-%D0%B7%D0%B0%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2--%D0%BD%D0%B0-%D0%BA%D0%B0%D0%B1%D0%BB%D1%83%D0%BA%D0%B5-p11212810.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=122040613"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/5.png"></div>
+            <div class="conteinerStyle-styleitem conteinerStyle-item6 move" onclick="active(6)"><img src="/img/items/6t.png"><a href="https://www.zara.com/ru/ru/%D0%B1%D1%80%D1%8E%D0%BA%D0%B8-%D0%B8%D0%B7-%D1%81%D1%82%D1%80%D1%83%D1%8F%D1%89%D0%B5%D0%B9%D1%81%D1%8F-%D1%82%D0%BA%D0%B0%D0%BD%D0%B8-p02718816.html?utm_campaign=productShare&utm_medium=mobile_sharing_iOS&utm_source=red_social_movil&v1=109014220"><p class="conteinerStyle-link">Перейти на сайт</p></a><img class="hoverBlack" src="/img/items/6.png"></div>
             <div class="unActive" style="position: absolute;width: 100%;height: 100%;" onclick="unActive()"></div>
         </div>
     </div>
@@ -83,17 +98,18 @@
         <img src="/img/footer/Vector.png" class="footer-vector3">
         <img src="/img/footer/Ellipse 3.png" class="footer-vector4">
         <img src="/img/footer/IMG_0094 1.png" class="footer-photo">
-        <div class="footer-form">
+        <form class="footer-form">
             <p class="footer-title">have questions?</p>
-            <img src="/img/livector.png" class="footer-livector1">
-            <img src="/img/livector.png" class="footer-livector2">
-            <input type="text" class="footer-input1" value="Name">
+            <div class="circle circle-1"></div>
+            <input type="text" class="footer-input1" name="Name" placeholder="Name" required>
             <br>
-            <input type="text" class="footer-input2" value="E-mail">
+            <div class="circle circle-3"></div>
+            <input type="text" class="footer-input2" name="Name" placeholder="E-mail" required>
             <br>
-            <input type="text" class="footer-input3" value="Text your message">
+            <div class="circle circle-2"></div>
+            <input type="text" class="footer-input3" name="Name" placeholder="Text your message">
             <br>
             <button class="footer-button darkbutton">send</button>
-        </div>
+        </form>
     </div>
 </body>

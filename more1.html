@@ -16,17 +16,28 @@
 </head>
 
 <body>
+    <div class="menu-mobile">
+        <img onclick="menu()" class="menu-close" src="/img/x.png">
+        <ul class="menu-nav">
+            <a href="/index.html" class="nav-link">
+                <li class="menu-item">HOME</li>
+            </a>
+            <a href="/styles.html" class="nav-link">
+                <li class="menu-item">ALL STYLES</li>
+            </a>
+        </ul>
+    </div>
     <div class="wrapper">
         <header class="header">
             <span class="serch">
                 <div class="serch-icon serch-item" onclick="serchOn()"><a><img src="img/serch.svg" alt=""></a></div>
-                <div class="srch-fprm none">
-                    <input type="text" value="Serch" class="serch-input serch-item">
+                <div class="serch-form none">
+                    <input type="text" placeholder="Serch . . ." class="serch-input serch-item">
                     <button class="darkbutton serch-button serch-item">enter</button>
                 </div>
             </span>
-            <span class="menu">
-                <a href="" class="menu-icon"><img src="img/menu.svg" alt=""></a>
+            <span class="menu" onclick="menu()">
+                <a class="menu-icon"><img src="img/menu.png" alt=""></a>
             </span>
             <nav>
                 <ul class="nav">
@@ -46,6 +57,7 @@
             <h1 class="subtitle1-h1">Wardrobe Оverview</h1>
         </div>
         <img src="/img/lamp.png" class="subtitle1-lamp">
+        <img src="/img/lamp3.png" class="subtitle1-mobilelamp">
     </div>
     <div class="conteiner7">
         <div class="conteiner7-content">
@@ -69,16 +81,19 @@
         <img src="/img/footer/Vector.png" class="footer-vector3">
         <img src="/img/footer/Ellipse 3.png" class="footer-vector4">
         <img src="/img/footer/IMG_0094 1.png" class="footer-photo">
-        <div class="footer-form">
+        <form class="footer-form">
             <p class="footer-title">have questions?</p>
-            <input type="text" class="footer-input1" value="Name">
+            <div class="circle circle-1"></div>
+            <input type="text" class="footer-input1" name="Name" placeholder="Name" required>
             <br>
-            <input type="text" class="footer-input2" value="E-mail">
+            <div class="circle circle-3"></div>
+            <input type="text" class="footer-input2" name="Name" placeholder="E-mail" required>
             <br>
-            <input type="text" class="footer-input3" value="МЯУ">
+            <div class="circle circle-2"></div>
+            <input type="text" class="footer-input3" name="Name" placeholder="Text your message">
             <br>
             <button class="footer-button darkbutton">send</button>
-        </div>
+        </form>
     </div>
 
 </body>
