@@ -4,17 +4,38 @@ $borderBlack:#252525;
 $font1:'Poiret One', cursive;
 
 
+.hide{
+    display: none;
+}
+
+.anim{
+    margin: 0;
+    padding: 0;
+    display: none;
+    -webkit-animation-name: anim;
+    -webkit-animation-duration: 1.5s;
+    animation-name: anim;
+    animation-duration: 1.5s;
+}
+
+input{   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0%;
+}
 
 
 
 .test{
     margin: 0;
     padding: 0;
-    &-conteiner{
+    &-container{
         // display: none;
         position: absolute;
     } 
-    &-conteiner img{
+    &-container img{
         position: absolute;
         margin: 0;
         padding: 0;
@@ -64,13 +85,13 @@ $font1:'Poiret One', cursive;
     width: 100%;
     min-height: 100px;
     overflow: hidden;
-    &-conteiner{
+    &-container{
         position: absolute;
         top: 0%;
         width: 100%;
         height: 100%;
     } 
-    &-conteiner img{
+    &-container img{
         position: absolute;
         top: 0;
         bottom: 0;
@@ -124,10 +145,23 @@ body {
 input:active, :hover, :focus {
     outline: 0;
     outline-offset: 0;
+    color: #000;
+}
+textarea:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+    color: #000;
 }
 
-// button:active, :focus {
-//     background-color: rgb(94, 255, 0);
+textarea::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5; 
+}
+  
+// textarea::-webkit-scrollbar-thumb {
+//     border-radius: 10px;
+//     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+//     background-color: #131313; 
 // }
 
 .darkbutton {
@@ -364,7 +398,7 @@ input:active, :hover, :focus {
 
 }
 
-.conteiner {
+.container {
     width: 100%;
     border-top: $borderBlack 1px solid;
     &-lamp{
@@ -383,10 +417,14 @@ input:active, :hover, :focus {
         border-left: $borderBlack 1px solid;
         border-right: $borderBlack 1px solid;
     }
+    &-content a{
+        text-decoration: none;
+        color: #000000;
+    }
     &-title{
         position: absolute;
         width: 424px;
-        top: 125px;
+        top: 100px;
         right: 0px;
         font-style: normal;
         font-weight: normal;
@@ -409,6 +447,7 @@ input:active, :hover, :focus {
         width: 70px;
         height: 587px;
         text-align: center;
+        transition: all 200ms;
     }
     &-instagram2{
         display: none;
@@ -424,10 +463,35 @@ input:active, :hover, :focus {
         margin-right: auto
     }
     &-instagramname{
-        margin-top: 66px;
+        margin: 0;
+        padding: 0;
+        margin-top: 55px;
+        margin-left: 14px;
+        font-family: Poiret One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 140.8%;
+        letter-spacing: 0.265em;
+        text-transform: uppercase;
+        color: #000000;
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        transition: all 200ms;
     }
     &-instagramlogo{
-        margin-top: 43px;
+        margin-top: 40px;
+        width: 30px;
+        text-align: center;
+        font-size: 30px;
+    }
+    &-instagram :hover{
+        color: #F3DBCC;
+        transition: all 200ms;
+    }
+    &-instagram2 :hover{
+        color: #F3DBCC;
+        transition: all 200ms;
     }
     &-line{
         height: 0.5px;
@@ -514,7 +578,7 @@ input:active, :hover, :focus {
     animation-duration: 1.8s;
 }
 
-.conteiner1 {
+.container1 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -573,18 +637,20 @@ input:active, :hover, :focus {
     width: 100%;
     height: 150px;
     border-top: $borderBlack 1px solid;
-    &-conteiner {
+    &-container {
         position: relative;
         width: 1169px;
         margin: 0 auto;
         top: -1px;
         height: 150px;
         border-right: $borderBlack 1px solid;
+        z-index: 10;
     }
     &-lamp{
         position: absolute;
         top:-75px;
         right: 0px;
+        z-index: 0;
     }
     &-mobilelamp{
         width: 100%;
@@ -605,7 +671,13 @@ input:active, :hover, :focus {
     }
 }
 
-.conteiner2 {
+.subtitle1{
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+}
+
+.container2 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -620,8 +692,8 @@ input:active, :hover, :focus {
     }
     &-title{
         float: left;
-        margin-left: 29px;
-        margin-top: 180px;
+        margin-left: 24px;
+        margin-top: 150px;
         letter-spacing: 0.18em;
     }
     &-photo{
@@ -680,7 +752,7 @@ input:active, :hover, :focus {
 }
 
 
-.conteiner3 {
+.container3 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -691,6 +763,9 @@ input:active, :hover, :focus {
         min-height: 652px;
         margin: 0 auto;
         padding: 0;
+    }
+    &-number{
+        display: none;
     }
     &-title{
         text-transform: uppercase;
@@ -744,7 +819,7 @@ input:active, :hover, :focus {
     width: 100%;
     height: 150px;
     border-top: $borderBlack 1px solid;
-    &-conteiner {
+    &-container {
         position: relative;
         width: 1169px;
         margin: 0 auto;
@@ -779,7 +854,8 @@ input:active, :hover, :focus {
     }
 }
 
-.conteiner4 {
+
+.container4 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -795,7 +871,7 @@ input:active, :hover, :focus {
     &-title{
         position: absolute;
         right: 39px;
-        top: 116px;
+        top: 129px;
     }
     &-photo{
         position: absolute;
@@ -861,7 +937,7 @@ input:active, :hover, :focus {
 
 
 
-.conteiner5 {
+.container5 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -880,10 +956,11 @@ input:active, :hover, :focus {
         position: absolute;
         top: 100px;
         left: 51px;
+
     }
     &-img3{
         position: absolute;
-        top: 150px;
+        top: 190px;
         left: 422px;
     }
     &-img4{
@@ -918,38 +995,40 @@ input:active, :hover, :focus {
 }
 .photo3{
     width: 338px;
+    display: none;
 }
 .photo1, .photo2, .photo5, .photo4{
     width: 283px;
+    display: none;
 }
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.9s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 1.9s;
   }
 .topArc{
     -webkit-animation-name: topArc;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.9s;
     animation-name: topArc;
-    animation-duration: 1.5s;
+    animation-duration: 1.9s;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
 
 .bottomArc{
     -webkit-animation-name: bottomArc;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.9s;
     animation-name: bottomArc;
-    animation-duration: 1.5s;
+    animation-duration: 1.9s;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
 .roundArc{
     -webkit-animation-name: roundArc;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.9s;
     animation-name: roundArc;
-    animation-duration: 1.5s;
+    animation-duration: 1.9s;
     border-radius: 50%;
 }
 
@@ -957,7 +1036,7 @@ input:active, :hover, :focus {
 
 
 
-.conteiner6 {
+.container6 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -1018,7 +1097,7 @@ input:active, :hover, :focus {
 }
 
 
-.conteiner7 {
+.container7 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -1051,7 +1130,12 @@ input:active, :hover, :focus {
         background-repeat: no-repeat;
         padding-left: 100px;
         padding-top: 8px;
+        transition: all 500ms;
     }
+    // &-title:hover{
+    //     transform: rotate(360deg);
+    //     transition: all 500ms;
+    // }
     &-text{
         margin: 0;
         padding: 0;
@@ -1079,11 +1163,12 @@ input:active, :hover, :focus {
 }
 
 
-.conteiner8 {
+.container8 {
     width: 100%;
     border-top: $borderBlack 1px solid;
     &-lamp{
         display: none;
+        z-index: 0;
     }
     &-content {
         position: relative;
@@ -1093,10 +1178,16 @@ input:active, :hover, :focus {
         padding: 0;
         border-left: $borderBlack 1px solid;
         border-right: $borderBlack 1px solid;
+        z-index: 10;
+    }
+    &-content a{
+        text-decoration: none;
+        color: #000000;
     }
     &-title{
         float: left;
         width: 312px;
+        min-height: 180px;
         margin-top: 76px;
         margin-left: 90px;
         font-style: normal;
@@ -1105,11 +1196,13 @@ input:active, :hover, :focus {
         line-height: 151.3%;    
         letter-spacing: 0.105em;
         text-transform: uppercase;
+        z-index: 10;
     }
     &-title p{
         margin: 0px 10px 0px 10px;
         padding: 0;
         float: left;
+        z-index: 100;
     }
     &-text{
         float: left;
@@ -1159,16 +1252,41 @@ input:active, :hover, :focus {
         margin-right: auto
     }
     &-instagramname{
-        margin-top: 50px;
+        margin: 0;
+        padding: 0;
+        margin-top: 55px;
+        margin-left: 14px;
+        font-family: Poiret One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 140.8%;
+        letter-spacing: 0.265em;
+        text-transform: uppercase;
+        color: #000000;
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        transition: all 200ms;
     }
     &-instagramlogo{
-        margin-top: 43px;
+        margin-top: 40px;
+        width: 30px;
+        text-align: center;
+        font-size: 30px;
+    }
+    &-instagram :hover{
+        color: #F3DBCC;
+        transition: all 200ms;
+    }
+    &-instagram2 :hover{
+        color: #F3DBCC;
+        transition: all 200ms;
     }
 
 }
 
 
-.conteinerStyle {
+.containerStyle {
     width: 100%;
     border-top: $borderBlack 1px solid;
     border-bottom: $borderBlack 1px solid;
@@ -1181,6 +1299,9 @@ input:active, :hover, :focus {
         border-left: $borderBlack 1px solid;
         border-right: $borderBlack 1px solid;
         border-bottom: $borderBlack 1px solid;
+    }
+    &-tap {
+        display: none;
     }
     &-content a{
         text-decoration: none;
@@ -1214,7 +1335,6 @@ input:active, :hover, :focus {
     &-content img{
         width: 100%;
         margin: 0;
-        position: absolute;
         top: 50%;
         left: 50%;
         // margin-right: -50%;
@@ -1313,7 +1433,12 @@ input:active, :hover, :focus {
     &-active:hover p{
         opacity: 100%;
         display: block;
+        color: rgb(255, 255, 255);
     }
+}
+
+.static{
+    position: absolute;
 }
 
 
@@ -1337,7 +1462,23 @@ input:active, :hover, :focus {
 }
 
 .subtitlemore1 {
-    background-image: url(/img/subtitle/1.png);
+    background-image: url(/img/subtitle/1.jpg);
+    background-size: 100%;
+    background-position: 0% 51%;
+}
+.subtitlemore2 {
+    background-image: url(/img/subtitle/2.jpg);
+    background-position: 100% 51%;
+}
+.subtitlemore3 {
+    background-image: url(/img/subtitle/3.jpg);
+    background-size: 100%;
+    background-position: 0% 81%;
+}
+.subtitlemore4 {
+    background-image: url(/img/subtitle/4.jpg);
+    background-size: 100%;
+    background-position: 10% 40%;
 }
 
 .footer {
@@ -1346,21 +1487,66 @@ input:active, :hover, :focus {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 691px;
+    min-height: 91px;
     margin: 0 auto;
     overflow: hidden;
+    &-down{
+        position: absolute;
+        bottom: 60px;
+        right: 10%;
+        font-family: Poiret One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: 0.07em;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    &-instagram{
+        position: absolute;
+        bottom: 60px;
+        right: 87%;
+    }
+    &-instagram p{
+        float: left;
+        margin: 0;
+        font-family: Poiret One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 24px;
+        /* identical to box height, or 160% */
+
+        text-align: right;
+        letter-spacing: 0.07em;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    &-instagramlogo{
+        float: left;
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        color: rgba(0, 0, 0, 0.678);
+    }
     &-form{
-        width: 27%;
+        padding-bottom: 200px;
+        width: 35%;
         position: relative;
         float: left;
         margin-top: 103px;
         // margin-left: 130px;
-        margin-left: 13%;
+        margin-left: 6%;
     }
     &-photo{
         float: left;
         width: 50%;
+        height: 700px;
         z-index: -40;
+        margin-bottom: -10px;
+        background-image: url(/img/footer/IMG_0094.png);
+        background-size: 150%;
+        background-repeat: no-repeat;
     }
     &-vector1{
         position: absolute;
@@ -1380,7 +1566,7 @@ input:active, :hover, :focus {
     &-vector4{
         position: absolute;
         top: 30px;
-        left: 35%;
+        left: 15%;
     }
     &-title{
         margin: 0px;
@@ -1401,58 +1587,93 @@ input:active, :hover, :focus {
         font-size: 15px;
         line-height: 140.8%;
         /* or 21px */
+        letter-spacing: 0.15em;
+        text-transform: capitalize;
+
+        color: rgba(0, 0, 0, 0.46);
+    }
+    &-form textarea{
+        resize: none;
+        font-family: Poiret One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 140.8%;
+        /* or 21px */
 
         letter-spacing: 0.15em;
         text-transform: capitalize;
 
         color: rgba(0, 0, 0, 0.46);
     }
+    &-form textarea:focus{
+        color: rgb(0, 0, 0);
+    }
+    &-form :focus{
+        color: rgb(0, 0, 0);
+    }
     &-input1{
-        float: right;
-        margin-right: 28px;
+        float: left;
+        margin-right: 0px;
         margin-top: 0px;
-        width: 80%;
-        height: 50px;
+        width: 68%;
+        height: 48px;
         padding-left: 26px;
         padding-right: 0px;
         border: none;
-        background-image: url(/img/livector.png);
-        background-position: 100% 50%;
+        background-color: #00000000;
+        background-image: url(/img/footer/input1.png);
+        box-shadow: none;
+        background-position: 102% 0%;
         background-repeat: no-repeat;
-        border: $borderBlack 1px solid;
-        border-right: none;
+        border-left: #787878 1px solid;
         z-index: 100;
+        overflow: hidden;
     }
     &-input2{
         margin-top: 17px;
-        margin-left: -0%;
-        width: 85%;
-        height: 50px;
-        padding-left: 45px;
+        margin-left: -40px;
+        width: 77%;
+        height: 48px;
+        padding-left: 68px;
         padding-right: 26px;
         border: none;
-        background-image: url(/img/livector.png);
-        background-position: 0% 50%;
+        background-color: #00000000;
+        background-image: url(/img/footer/input2.png);
+        background-position: 0% 0%;
         background-repeat: no-repeat;
+        border-right: #787878 1px solid;
         z-index: 100;
-        border: $borderBlack 1px solid;
-        border-left: none;
+        overflow: hidden;
     }
     &-input3{
-        float: right;
+        float: left;
         margin-top: 17px;
         margin-right: 50px;
-        width: 82%;
-        height: 110px;
-        padding: 13.5px 4%;
+        width: 77%;
+        height: 83px;
+        padding: 13.5px 26px;
+        padding-right: 30px;
         border: none;
+        background-color: #00000000;
+        background-image: url(/img/footer/input3.png);
+        background-position: 102% 0%;
+        background-repeat: no-repeat;
+        border-left: #787878 1px solid;
         z-index: 100;
-        border: $borderBlack 1px solid;
-        border-right: none;
+        overflow: hidden;
     }
     &-button{
-        float: right;
-        margin-right: 0px;
+        margin-left: 0;
+        min-width: 140px;
+        padding: 10px 0;
+        position: absolute;
+        left: 60%;
+        bottom: 130px;
+        font-size: 15px;
+        line-height: 140.8%;
+        letter-spacing: 0.195em;
+        text-transform: uppercase;
     }
     &-livector1{
         position: absolute;
@@ -1468,33 +1689,6 @@ input:active, :hover, :focus {
 
 
 
-.circle{
-    position: absolute;
-    border:  1px solid ;
-    border-radius:50% ;
-    background-color: white;
-    z-index: -1;
-    &-1{
-        right: 0;
-        margin-top: 0px;
-        height: 52px;
-        width: 52px;
-    }
-    &-3 {
-        left: 0;
-        margin-top: 17px;
-        left: -27px;
-        height: 52px;
-        width: 52px;
-    }
-    &-2{
-        width: 139px;
-        height: 137px;
-        right: 0;
-        margin-right: -22px;
-        margin-top: 17px;
-    }
-}
 
 
 
@@ -1528,7 +1722,13 @@ input:active, :hover, :focus {
         margin-left: 96px;
     }
 }
-
+.title3{
+    margin-top: 170px;
+}
+.opacity{
+    opacity: 0%;
+    transition: all 1000ms;
+}
 
 
 
@@ -1586,6 +1786,31 @@ input:active, :hover, :focus {
     to {opacity: 1}
 }
 
+
+@-webkit-keyframes anim {
+    from {
+        // opacity: 0%;
+        // margin-top: 40px;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    } 
+    to {
+        // opacity: 100%;
+        // margin-top: 0px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+@keyframes anim {
+    from {
+        // opacity: 0%;
+        // margin-top: 40px;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    } 
+    to {
+        // opacity: 100%;
+        // margin-top: 0px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
 
 
 @-webkit-keyframes topArc {
@@ -1740,7 +1965,6 @@ input:active, :hover, :focus {
             padding: 0;
             padding-left: 3%;
             border: none;
-            border-bottom: $borderBlack 1px solid;
         }
         &-button{
             display: none;
@@ -1761,7 +1985,11 @@ input:active, :hover, :focus {
     .menu img{
         width: 100%;
     }
-    .conteiner{
+    .container a{
+        color: #000;
+    }
+    .container{
+        overflow: hidden;
         &-content{
             min-height: 40px;
             height: auto;
@@ -1769,7 +1997,15 @@ input:active, :hover, :focus {
             margin-left:4.5%;
             margin-right:4.5%;
             border-left: 1px #03030300 solid;
-            z-index: 1;
+            z-index: -1;
+        }
+        &-link{
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            cursor: pointer;
+            background-color: #000000;
         }
         &-slider {
             width: 100%;
@@ -1781,7 +2017,7 @@ input:active, :hover, :focus {
             position: static;
             width: 100%;
             display: block;
-            min-height: 350px;
+            min-height: 150px;
             overflow: hidden;
             // z-index: 100;
             border: none;
@@ -1814,17 +2050,31 @@ input:active, :hover, :focus {
             text-align: center;
             height: 362px;
             background-color: #ffffff;
-            z-index: 100;
+            z-index: 10000;
             border-right: 1px #030303 solid;
             border-bottom: 1px #030303 solid;
+            margin-bottom: -0.5px;
+        }
+        &-instagram2 :hover{
+            color: #F3DBCC;
+            transition: all 200ms;
+        }
+        &-instagram2 a{
+            text-decoration: none;
         }
         &-instagramname{
-            height: 205px;
+            margin: 0 auto;
             margin-top: 69px;
+            font-size: 13px;
+            line-height: 140.8%;
+            /* or 18px */
+
+            letter-spacing: 0.33em;
+            text-transform: uppercase;
         }
         &-instagramlogo{
             margin-top: 15px;
-            width: 21px;
+            width: 18px;
         }
         &-title{
             float: left;
@@ -1834,7 +2084,7 @@ input:active, :hover, :focus {
             margin: 0 auto;
             right: none;
             left: 23px;
-            top: 68px;
+            top: 98px;
         }
         &-line{
             display: none;
@@ -1876,7 +2126,8 @@ input:active, :hover, :focus {
 
 
 
-    .conteiner1 {
+    .container1 {
+        overflow: hidden;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -1930,7 +2181,7 @@ input:active, :hover, :focus {
         &-vector{
             position: absolute;
             width: 85%;
-            top: 220px;
+            top: 210px;
             right: none;
             left: -3%;
         }
@@ -1938,7 +2189,8 @@ input:active, :hover, :focus {
 
 
 
-    .conteiner2 {
+    .container2 {
+        overflow: hidden;
         &-content {
             position: relative;
             width: 100%;
@@ -1946,12 +2198,12 @@ input:active, :hover, :focus {
             margin: 0 auto;
             padding: 0;
             padding-bottom: 10px;
-            border-left: $borderBlack 1px solid;
+            border-left: none;
         }
         &-title{
-            width: 4%;
-            margin-left: 8%;
-            margin-top: 26%;
+            width: 5%;
+            margin-left: 7%;
+            margin-top: 22%;
         }
         &-photo{
             position: static;
@@ -1999,9 +2251,9 @@ input:active, :hover, :focus {
             padding: 0px;
             margin-top: 40px;
             background-image: url(/img/livector.png);
-            padding-left: 65px;
-            background-position: 0px 0px;
-            background-size: 35px 35px;
+            padding-left: 40px;
+            background-position: 0px 5px;
+            background-size: 27px 27px;
             background-repeat: no-repeat;
         }
 
@@ -2012,18 +2264,41 @@ input:active, :hover, :focus {
         &-photo{
             height: auto;
         }
+        &-subtitle{
+            margin-left: 0px;
+        }
+    }
+    .title3{
+        width: 4%;
+        margin-top: 24%;
     }
 
-    .conteiner2 button{
+    .container2 button{
         width: 100%;
         margin: 0;
         margin-top: 30px;
     }
 
-    .conteiner3 {
+    .container3 {
+        overflow: hidden;
         &-content {
             width: 100%;
             padding-bottom: 60px;
+        }
+        &-number{
+            display: block;
+            margin-top: 40px;
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140.8%;
+            /* identical to box height, or 20px */
+
+            letter-spacing: 0.105em;
+            text-transform: uppercase;
+
+            color: #EFDBCE;
         }
         &-title{
             margin: 0;
@@ -2048,7 +2323,7 @@ input:active, :hover, :focus {
             width: 100%;
             margin: 0;
             padding: 0;
-            margin-top: 60px;
+            margin-top: 5px;
             background: none;     
             text-transform: capitalize;     
         }
@@ -2058,7 +2333,8 @@ input:active, :hover, :focus {
         }
     }
 
-    .conteiner4 {
+    .container4 {
+        overflow: hidden;
         border-top: none;
         &-content {
             width: 100%;
@@ -2066,15 +2342,16 @@ input:active, :hover, :focus {
             flex-flow: wrap;
             border-top: $borderBlack 1px solid;
             border-right: none;
-            padding-bottom: 20px;
+            padding-bottom: 50px;
         }
         &-title{
             position: static;
             width: 4%;
-            height: fit-content;
             margin-left: 8%;
             margin-top: 25%;
             top: 0;
+            display: flex;
+            align-self: flex-start;
             order: 1;
         }
         &-photo{
@@ -2083,6 +2360,8 @@ input:active, :hover, :focus {
             width: 80%;
             margin-left: 0%;
             border-right: $borderBlack 1px solid;
+            display: flex;
+            align-self: flex-start;
             order: 0;
         }
         &-text{
@@ -2095,6 +2374,7 @@ input:active, :hover, :focus {
             padding-left:6%;
             padding-right:6%;
             border-top: $borderBlack 1px solid;
+            align-self: flex-start;
             order: 2;
         }
         &-vector{
@@ -2130,21 +2410,22 @@ input:active, :hover, :focus {
             padding: 0px;
             margin-top: 40px;
             background-image: url(/img/livector.png);
-            padding-left: 65px;
-            background-position: 0px 0px;
-            background-size: 35px 35px;
+            padding-left: 40px;
+            background-position: 0px 5px;
+            background-size: 27px 27px;
             background-repeat: no-repeat;
         }
     }
 
-    .conteiner4 button{
+    .container4 button{
         width: 100%;
         margin: 0;
         margin-top: 30px;
     }
 
 
-    .conteiner5 {
+    .container5 {
+        overflow: hidden;
         width: 100%;
         border-top: none;
         &-content {
@@ -2204,7 +2485,8 @@ input:active, :hover, :focus {
 
 
 
-    .conteiner6 {
+    .container6 {
+        overflow: hidden;
         border-top: none;
         &-content {
             width: 100%;
@@ -2217,10 +2499,11 @@ input:active, :hover, :focus {
         &-title{
             position: static;
             width: 4%;
-            height: fit-content;
             margin-left: 8%;
             margin-top: 27%;
             top: 0;
+            display: flex;
+            align-self: flex-start;
             order: 1;
         }
         &-photo{
@@ -2229,7 +2512,10 @@ input:active, :hover, :focus {
             width: 80%;
             margin-left: 0%;
             border-right: $borderBlack 1px solid;
+            display: flex;
             order: 0;
+            align-self: flex-start;
+
         }
         &-text{
             float: right;
@@ -2242,6 +2528,8 @@ input:active, :hover, :focus {
             padding-right:6%;
             border-top: $borderBlack 1px solid;
             order: 2;
+            align-self: flex-start;
+
         }
         &-vector{
             width: 70%;
@@ -2263,7 +2551,7 @@ input:active, :hover, :focus {
         }
     }
 
-    .conteiner6 button{
+    .container6 button{
         width: 100%;
         margin: 0;
         margin-top: 30px;
@@ -2275,7 +2563,7 @@ input:active, :hover, :focus {
     .subtitle1, .subtitle2 {
         height: 28px;
         padding: 31px 0px 31px 0px;
-        &-conteiner {
+        &-container {
             width: 100%;
             border-right: none;
             border-left: none;
@@ -2299,7 +2587,13 @@ input:active, :hover, :focus {
         }
     }
 
-    .conteiner7 {
+    .subtitlemore3 {
+        background-size: 120%;
+        background-position: 0% 92%;
+    }
+
+    .container7 {
+        overflow: hidden;
         width: 100%;
         &-content {
             position: relative;
@@ -2314,9 +2608,11 @@ input:active, :hover, :focus {
             padding-left: 15%;
             font-size: 18px;
             line-height: 155.8%;
-            /* or 28px */
-
+            background-image: url(/img/livector2.png);
             letter-spacing: 0.18em;
+            padding-left: 45px;
+            background-position: 0px 7px;
+            background-size: 27px 27px;
         }
         &-text{
             margin: 0;
@@ -2342,15 +2638,16 @@ input:active, :hover, :focus {
     }
 
 
-    .conteiner8{
+    .container8{
+        overflow: hidden;
         &-content{
-            min-height: 1050px;
+            min-height: 1040px;
             width: 91%;
             margin-left:4.5%;
             margin-right:4.5%;
             border-right: 1px #030303 solid;
             border-left: 1px #03030300 solid;
-            z-index: 1;
+            z-index: 10;
         }
         &-lamp{
             display: block;
@@ -2358,6 +2655,7 @@ input:active, :hover, :focus {
             right: 0;
             width: 100%;
             height: auto;
+            z-index: -1;
         }
         &-your{
             color: black;
@@ -2368,21 +2666,36 @@ input:active, :hover, :focus {
         &-instagram2{
             display: block;
             float: left;
-            width: 60px;
+            width: 15%;
             text-align: center;
             height: 362px;
             background-color: #ffffff;
-            z-index: 100;
+            z-index: 10000;
             border-right: 1px #030303 solid;
             border-bottom: 1px #030303 solid;
+            margin-bottom: -0.5px;
+        }
+        &-instagram2 :hover{
+            color: #F3DBCC;
+            transition: all 200ms;
+        }
+        &-instagram2 a{
+            text-decoration: none;
+            color: #000000;
         }
         &-instagramname{
-            height: 205px;
+            margin: 0 auto;
             margin-top: 69px;
+            font-size: 13px;
+            line-height: 140.8%;
+            /* or 18px */
+
+            letter-spacing: 0.33em;
+            text-transform: uppercase;
         }
         &-instagramlogo{
             margin-top: 15px;
-            width: 21px;
+            font-size: 20px;
         }
         &-title{
             float: left;
@@ -2391,6 +2704,7 @@ input:active, :hover, :focus {
             margin: 0 auto;
             margin-top: 90px;
             margin-left: 2%;
+            z-index: 100;
         }
         &-photo{
             position: static;
@@ -2399,24 +2713,47 @@ input:active, :hover, :focus {
             width: 100%;
             height: fit-content;
             border-top: 1px #030303 solid;
+            border-left: 1px #030303 solid;
             margin: 0;
             padding: 0;
         }
         &-photo img{
             width: 100%;
+            margin-bottom: -6px;
         }
         &-text{
             width: 100%;
             margin: 0;
             padding: 0;
-            margin-top: 46px;
+            margin-top: 0px;
+            padding-top: 46px;
+            border-top: 1px #030303 solid;
         }
     }
 
-    
 
-    .conteinerStyle {
 
+    .containerStyle {
+
+        &-tap{
+            display: block;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            bottom: 10px;
+            left: 10px;
+            font-family: Poiret One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 140.8%;
+            /* or 18px */
+
+            letter-spacing: 0.145em;
+            text-transform: lowercase;
+
+            color: #C2C2C2;
+        }
         &-content {
             width: 80%;
             min-height: 718px;
@@ -2429,7 +2766,6 @@ input:active, :hover, :focus {
             padding-top: 60px;
         }
         &-content img{
-            position: static;
             top: 0%;
             left: 0%;
             // margin-right: -50%;
@@ -2451,6 +2787,13 @@ input:active, :hover, :focus {
             top: 0;
             left: 0;
         }
+        &-item1 h3{
+            bottom: inherit;
+            top: 10px;
+            left: 25%;
+            text-align: center;
+            width: 50%;
+        }
         &-item2{
             order: 0;
             height: auto ;
@@ -2468,6 +2811,10 @@ input:active, :hover, :focus {
             height: auto ;
             top: 0;
             left: 0;
+        }
+        &-item4 h3{
+            bottom: inherit;
+            top: 10px;
         }
         &-item5{
             order: 2;
@@ -2524,19 +2871,22 @@ input:active, :hover, :focus {
         }
     }
 
+    .static{
+        position: static;
+    }
+
     .move :hover{
         margin-top: 0px;
         margin-left: -10%;
         width: 120%;
-    }
-    
+    } 
 
     .hoverBlack{
         width: 10px;
-        height: 0px;
+        // height: 0px;
         overflow: hidden;
         position: absolute;
-        top: 100px;
+        top: 0;
         left: 0;
         display: none;
     }
@@ -2548,17 +2898,41 @@ input:active, :hover, :focus {
 
     .footer {
         height: auto;
-        padding-bottom: 100px;
+        padding-bottom: 250px;
+        &-down{
+            width: 250px;
+            bottom: 0;
+        }
+        &-instagram{
+            width: 65%;
+            position: absolute;
+            bottom: 75px;
+            right: 10%;
+            padding:0 0 15px 0;
+            border-bottom: #ffffff48 1px solid;
+        }
+        &-instagram p{
+           position: absolute;
+           right: 40px;
+        }
+        &-instagramlogo{
+            float: right;
+        }
         &-form{
             position: relative;
             width: 80%;
             margin: 0% 10%;
+            padding-bottom: 90px;
         }
         &-photo{
             float: left;
-            height: 150%;
-            width: auto;
+            width: 100%;
             position: absolute;
+            height: 100%;
+            z-index: -40;
+            background-image: url(/img/footer/IMG_0094.png);
+            background-size: 300%;
+            background-repeat: no-repeat;
         }
         &-vector1{
             position: absolute;
@@ -2567,8 +2941,9 @@ input:active, :hover, :focus {
         }
         &-vector2{
             position: absolute;
-            top: 130px;
-            left: 20%;
+            top: 160px;
+            left: inherit;
+            right: 10px;
         }
         &-vector3{
             position: absolute;
@@ -2581,7 +2956,9 @@ input:active, :hover, :focus {
             left: 35%;
         }
         &-title{
-            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: auto;
             text-align: center;
             padding: 0;
             margin: 70px auto;
@@ -2591,50 +2968,26 @@ input:active, :hover, :focus {
             text-transform: uppercase;
         }
         &-input1{
-            float: right;
-            margin-right: 28px;
-            margin-top: 0px;
-            width: 80%;
-            height: 50px;
-            padding-left: 26px;
-            padding-right: 0px;
-            border: none;
-            background-image: url(/img/livector.png);
-            background-position: 100% 50%;
-            background-repeat: no-repeat;
-            border: $borderBlack 1px solid;
-            border-right: none;
-            z-index: 100;
+            width: 77%;
+            background-color: #00000000;
         }
         &-input2{
             margin-top: 17px;
-            margin-left: -0%;
-            width: 85%;
+            margin-left: -20px;
+            width: 74%;
             height: 50px;
-            padding-left: 45px;
+            padding-left: 68px;
             padding-right: 26px;
-            border: none;
-            background-image: url(/img/livector.png);
-            background-position: 0% 50%;
-            background-repeat: no-repeat;
-            z-index: 100;
-            border: $borderBlack 1px solid;
-            border-left: none;
+            background-color: #00000000;
         }
         &-input3{
-            float: right;
-            margin-top: 17px;
-            margin-right: 50px;
-            width: 82%;
-            height: 110px;
-            padding: 13.5px 4%;
-            padding-right: 0px;
-            border: none;
-            z-index: 100;
-            border: $borderBlack 1px solid;
-            border-right: none;
+            width: 81%;
+            background-color: #00000000;
         }
         &-button{
+            right: 0;
+            left: 0;
+            bottom: 0;
             width: 100%;
             margin: 0;
             margin-top: 30px;

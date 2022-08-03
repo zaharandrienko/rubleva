@@ -1,42 +1,23 @@
-
 var menuIndex = false
-showMobile()
+var serchInd = false
 
 
+AOS.init();
 
-function showMobile() {
-    var slides = document.getElementsByClassName("next2");
-    setTimeout(
-        function showSlides1() {
-            slides[0].style.display = "block";
-            setTimeout(
-                function showSlides2() {
-                    slides[1].style.display = "block";
-                    setTimeout(
-                        function showSlides3() {
-                            slides[2].style.display = "block";
-                            setTimeout(
-                                function showSlides4() {
-                                    slides[3].style.display = "block";
-                                    setTimeout(
-                                        function restart() {
-                                            var i;
-                                            for (i = 0; i < slides.length; i++) {
-                                                slides[i].style.display = "none";
-                                            }
-                                            showMobile()
-                                        }
-                                        , 2500)
-                                }
-                                , 3000)
-                        }
-                        , 3000)
-                }
-                , 3000)
-        }
-        , 500)
+Anim()
+
+
+function Anim() {
+    var anim = document.getElementsByClassName("anim");
+    for (i = 0; i < anim.length; i++) {
+        anim[0].style.display = "block";
+
+        setTimeout(anim[1].style.display = "block", 200)
+        setTimeout(anim[2].style.display = "block", 300)
+        setTimeout(anim[3].style.display = "block", 400)
+
+    }
 }
-
 
 
 function menu() {
@@ -49,7 +30,6 @@ function menuInd() {
 
     if (menuIndex) {
         Menu[0].className += " close";
-        console.log("lllllll")
     }
     else {
         Menu[0].className = Menu[0].className.replace(" close", "");
@@ -58,29 +38,25 @@ function menuInd() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function serchOn() {
-    var serch = document.getElementsByClassName("none");
-    var i;
-    for (i = 0; i < serch.length; i++) {
-        serch[i].style.display = "block";
-    }
+    serchInd = !serchInd
+    serch()
 }
 
-
+function serch() {
+    var serch = document.getElementsByClassName("none");
+    var i;
+    if (serchInd) {
+        for (i = 0; i < serch.length; i++) {
+            serch[i].style.display = "block";
+        }
+    }
+    else {
+        for (i = 0; i < serch.length; i++) {
+            serch[i].style.display = "none";
+        }
+    }
+}
 
 
 
@@ -106,8 +82,8 @@ function menuInd() {
 
 function active(n) {
     var activeIndex = n
-    var active = document.getElementsByClassName("conteinerStyle-styleitem");
-    var link = document.getElementsByClassName("conteinerStyle-link");
+    var active = document.getElementsByClassName("containerStyle-styleitem");
+    var link = document.getElementsByClassName("containerStyle-link");
     var black = document.getElementsByClassName("hoverBlack");
 
 
@@ -121,10 +97,10 @@ function active(n) {
     }
 
     for (i = 0; i < active.length; i++) {
-        active[i].className = active[i].className.replace(" conteinerStyle-active", " move");
+        active[i].className = active[i].className.replace(" containerStyle-active", " move");
     }
 
-    active[activeIndex - 1].className = active[activeIndex - 1].className.replace(" move", " conteinerStyle-active");
+    active[activeIndex - 1].className = active[activeIndex - 1].className.replace(" move", " containerStyle-active");
     setTimeout(
         function restart() {
             link[activeIndex - 1].style.display = "block";
@@ -135,8 +111,8 @@ function active(n) {
 
 
 function unActive() {
-    var active = document.getElementsByClassName("conteinerStyle-styleitem");
-    var link = document.getElementsByClassName("conteinerStyle-link");
+    var active = document.getElementsByClassName("containerStyle-styleitem");
+    var link = document.getElementsByClassName("containerStyle-link");
     var black = document.getElementsByClassName("hoverBlack");
 
     var i;
@@ -149,7 +125,7 @@ function unActive() {
     }
 
     for (i = 0; i < active.length; i++) {
-        active[i].className = active[i].className.replace(" conteinerStyle-active", " move");
+        active[i].className = active[i].className.replace(" containerStyle-active", " move");
     }
 
 }
